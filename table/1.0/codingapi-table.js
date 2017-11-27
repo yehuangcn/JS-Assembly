@@ -92,11 +92,22 @@ var getTableStyle = function( div ){
         var tr = $('<tr></tr>');
         for(var i = 0; i< data.filed.length ; i++){
             var obj = data.filed[i];
-            var method ="";
-            if(obj.method !=""){
-                method="data-formatter=\""+obj.method+"\"";
+            var field ="";
+            if(obj.value !=""){
+                field="data-field=\""+obj.value+"\"";
             }
-            tr.append('<th  data-field='+obj.value+'  '+method+'>'+obj.name+'</th>');
+
+            var formatter ="";
+            if(obj.formatter !=""){
+                formatter="data-formatter=\""+obj.formatter+"\"";
+            }
+
+            var events ="";
+            if(obj.events !=""){
+                events="data-events=\""+obj.events+"\"";
+            }
+
+            tr.append('<th  '+field+'  '+events+'   '+formatter+' >'+obj.name+'</th>');
         }
         thead.append(tr);
         tableUrl = data.dataUrl;
