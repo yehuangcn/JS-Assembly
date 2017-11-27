@@ -88,10 +88,9 @@ var getTableStyle = function( tableId ){
     tr.append('<th>标识</th>');
     tr.append('<th>标识</th>');
     tr.append('<th>标识</th>');
-
     thead.append(tr);
-    $("#"+tableId).append(thead);
-    hint("运行了");
+    $("table[data-table-id="+tableId+"]").append(thead);
+
 }
 
 init();
