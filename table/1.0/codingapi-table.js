@@ -91,7 +91,7 @@ var getTableStyle = function( tableId ){
 
     thead.append(tr);
     $("#"+tableId).append(thead);
-
+    hint("运行了");
 }
 
 init();
