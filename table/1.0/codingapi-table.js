@@ -56,7 +56,6 @@ var init = function(){
 
         for(var i in defaultAttrs){
             var attr = defaultAttrs[i];
-            console.log(attr);
             var attrName = attr.name;
 
             if(!constant(attrName,attrs)){
@@ -74,28 +73,24 @@ var init = function(){
                 table.attr(newAttrName,attrValue);
             }
         }
-
-        var thead = $('<thead></thead>');
-        var tr = $('<tr></tr>');
-
-        tr.append('<th>标识</th>');
-        tr.append('<th>标识</th>');
-        tr.append('<th>标识</th>');
-
-        thead.append(tr);
-        table.append(thead);
-
        $(div).append(table);
+
     });
 }
 
 
 
-var getTableStyle = function(){
+var getTableStyle = function( tableId ){
 
+    var thead = $('<thead></thead>');
+    var tr = $('<tr></tr>');
 
+    tr.append('<th>标识</th>');
+    tr.append('<th>标识</th>');
+    tr.append('<th>标识</th>');
 
-
+    thead.append(tr);
+    $("#"+tableId).append(thead);
 
 }
 
