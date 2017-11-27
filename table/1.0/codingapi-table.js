@@ -43,6 +43,9 @@ var reloadNamedNodeMap = function(attrs){
     return array;
 }
 
+/**
+ *  初始化table
+ */
 var init = function(){
 
     var tabs =$("div[api-type=table]");
@@ -79,15 +82,21 @@ var init = function(){
 }
 
 
-
-var getTableStyle = function( tableId ){
-
+/**
+ *  初始化table 头部 【 div中需添加 api-data-table-id 属性 】
+ *  tableId
+ *  head ： 为json格式 ["id","名字","密码"] 字符串
+ * @param tableId
+ */
+var getTableStyle = function( tableId , head ){
     var thead = $('<thead></thead>');
     var tr = $('<tr></tr>');
 
-    tr.append('<th>标识</th>');
-    tr.append('<th>标识</th>');
-    tr.append('<th>标识</th>');
+    var obj = JSON.parse(head);
+
+    for(var i = 0; i< obj.length ; i++){
+        tr.append('<th>'+obj[i]+'</th>');
+    }
     thead.append(tr);
     $("table[data-table-id="+tableId+"]").append(thead);
 
