@@ -54,10 +54,10 @@ api-* | 否 | * 是 bootstrap-table 的属性，例如：设置请求类型  api
 
 ```
 
-key | value 
---------- | ------------- 
-dataUrl  |  table填充数据地址，值：1.http:test:80/web/finduser , 2./web/finduser 。当为第二种情况时需配置一个全局前缀路径 “URL”
-filed    | table 的展示列
-          | table 的展示列  | table 的展示列
+key | value  |  
+--------- | -------------  | ------------- 
+dataUrl  |  table填充数据地址，值：1.http:test:80/web/finduser , 2./web/finduser 。当为第二种情况时需配置一个全局前缀路径 “URL” |
+filed    | table 的展示列 |
+          | table 的展示列  | table 的展示列
 
 
