@@ -41,20 +41,8 @@ table.json 说明：
       "value": "id",
       "formatter":"",
       "events": ""
-    },
-    {
-      "name": "账户",
-      "value": "userName",
-      "formatter":"icon",
-      "events": "onclock"
-    },
-    {
-      "name": "手机号",
-      "value": "mobile",
-      "formatter":"",
-      "events": ""
-    },
-    {
+    },
+    {
       "name": "操作",
       "value": "",
       "formatter":"operateFormatter",
@@ -64,3 +52,6 @@ table.json 说明：
 }
 
 ```
+
+
+
