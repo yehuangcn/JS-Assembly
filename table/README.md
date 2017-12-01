@@ -27,3 +27,40 @@ api-type  | 是 | 初始化table必要属性，值为 “table”
 api-url   | 是 | 地址返回一个json格式的数据 【详情见table.json说明】
 api-data-id | 是 | 该属性设置了 table 的 id
 api-* | 否 | * 是 bootstrap-table 的属性，例如：设置请求类型  api-data-method="post"
+
+
+table.json 说明：
+
+```json
+
+{
+  "dataUrl": "/agent/findAllAgentPage" ,
+  "filed": [
+    {
+      "name": "标识",
+      "value": "id",
+      "formatter":"",
+      "events": ""
+    },
+    {
+      "name": "账户",
+      "value": "userName",
+      "formatter":"icon",
+      "events": "onclock"
+    },
+    {
+      "name": "手机号",
+      "value": "mobile",
+      "formatter":"",
+      "events": ""
+    },
+    {
+      "name": "操作",
+      "value": "",
+      "formatter":"operateFormatter",
+      "events": "operateEvents"
+    }
+  ]
+}
+
+```
