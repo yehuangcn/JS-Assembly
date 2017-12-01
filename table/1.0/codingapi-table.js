@@ -80,6 +80,19 @@ var init = function(){
 }
 
 
+function  loadData( url , table){
+
+    if(!url.startWith("http://")){
+        url = URL + url;
+    }
+
+    var token =   comment.getToken();
+    var dataUrl = url + "?token="+token;
+    table.bootstrapTable("refresh", {url: dataUrl});
+
+}
+
+
 /**
  *  初始化table 头部
  * @param tableId
@@ -118,12 +131,17 @@ var getTableStyle = function( div ){
         $(table).append(thead);
     });
 
-    setTimeout(function(){
-        var token =   comment.getToken();
-        var url = URL + tableUrl+"?token="+token;
-        table.bootstrapTable("refresh", {url: url});
-    },1);
+
+
+    setTimeout(loadData(url ,table ),1);
 }
+
+
+
+
+
+
+
 
 
 init();
