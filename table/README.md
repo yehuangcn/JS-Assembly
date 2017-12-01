@@ -25,4 +25,5 @@
 --------- | ------------- | -------------
 api-type  | 是 | 初始化table必要属性，值为 “table”
 api-url   | 是 | 地址返回一个json格式的数据 【详情见table.json说明】
-api-data-id | 是 | 该属性设置了 table 的 id 需唯一
+api-data-id | 是 | 该属性设置了 table 的 id
+api-data-id | 是 | 该属性设置了 table 的 id
