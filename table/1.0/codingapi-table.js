@@ -66,6 +66,10 @@ var init = function(){
             var attrValue = attr.value;
 
             if(attrName!=null&&attrName.startWith("api-data")){
+                if(attrName =="api-data-id"){
+                    table.attr("id",attrValue);
+                }
+
                 var newAttrName = attrName.substring(4,attr.length);
                 table.attr(newAttrName,attrValue);
             }
