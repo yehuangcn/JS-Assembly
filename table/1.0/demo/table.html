@@ -36,18 +36,31 @@
     //自定义函数：
 
     var userNameFormatter = function(value,row){
-        console.log(value,row);
         return '<label style="color: #ffb70d">'+value+'</label>';
     }
 
-    var operateFormatter = function (v) {
-        return '添加 删除';
+    var operateFormatter = function (v,r) {
+        return ['<a class="add" data-id="'+r.id+'" href="#">添加</a>',
+            '<a class="del" data-id="'+r.id+'" href="#">删除</a>'].join('&nbsp;');
     }
 
 
     var loadTable = function () {
         $("#table1").bootstrapTable("refresh", {url: "data_test.json"});
     }
+
+
+    $(document).on("click",".add",function(){
+        var id = $(this).attr("data-id");
+        alert('添加.'+id);
+        return false;
+    });
+
+    $(document).on("click",".del",function(){
+        var id = $(this).attr("data-id");
+        alert('删除.'+id);
+        return false;
+    });
 
 </script>
 
