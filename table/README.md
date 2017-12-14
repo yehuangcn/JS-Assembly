@@ -63,3 +63,5 @@ value     | 数据填充对应的值【bootstrap-table th标签 中 data-fiel
 formatter | js填充列内容  【bootstrap-table th标签 中 data-formatter属性 】
 events    | js事件  【bootstrap-table th标签 中 data-events属性 】
 
+
+可参考demo预览效果.

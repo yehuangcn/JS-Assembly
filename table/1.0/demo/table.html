@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="../../../common/common.js"></script>
+    <script src="../../../common/jquery-2.2.3.min.js"></script>
+    <script src="../../../common/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../../../common/bootstrap-table/bootstrap-table.js"></script>
+    <script src="../../../common/bootstrap-table/bootstrap-table-zh-CN.js"></script>
+
+    <link rel="stylesheet" href="../../../common/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet"  href="../../../common/bootstrap-table/bootstrap-table.css">
+
+
+</head>
+<body>
+
+
+<div class="form-inline" role="form" id="toolbar">
+    <button type="button" onclick="loadTable()" class="btn btn-default">
+        refresh
+    </button>
+</div>
+
+
+<div api-type="table" api-data-toolbar="#toolbar" api-url="style.json" api-data-id="table1" > </div>
+
+
+<script src="../codingapi-table.js"></script>
+
+<script>
+
+    //自定义函数：
+
+    var userNameFormatter = function(value,row){
+        console.log(value,row);
+        return '<label style="color: #ffb70d">'+value+'</label>';
+    }
+
+    var operateFormatter = function (v) {
+        return '添加 删除';
+    }
+
+
+    var loadTable = function () {
+        $("#table1").bootstrapTable("refresh", {url: "data_test.json"});
+    }
+
+</script>
+
+</body>
+</html>

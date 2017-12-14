@@ -1,0 +1,24 @@
+{
+  "dataUrl": "data.json" ,
+  "filed": [
+    {
+      "name": "标识",
+      "value": "id"
+    },
+    {
+      "name": "账户",
+      "value": "userName",
+      "formatter":"userNameFormatter"
+    },
+    {
+      "name": "手机号",
+      "value": "mobile"
+    },
+    {
+      "name": "操作",
+      "value": "",
+      "formatter":"operateFormatter",
+      "events": ""
+    }
+  ]
+}

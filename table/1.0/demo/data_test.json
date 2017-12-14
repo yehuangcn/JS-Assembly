@@ -1,0 +1,28 @@
+{
+  "total": 3,
+  "rows": [
+    {
+      "id": "001",
+      "userName": "小红1",
+      "mobile": "1555551121"
+    },
+    {
+      "id": "002",
+      "userName": "小明1",
+      "mobile": "1555551122"
+    },
+    {
+      "id": "003",
+      "userName": "小强1",
+      "mobile": "1555551123"
+    },
+    {
+      "id": "004",
+      "userName": "小丽1",
+      "mobile": "1555551124"
+    }
+  ],
+  "nowPage": 1,
+  "pageNumber": 1,
+  "pageSize": 10
+}

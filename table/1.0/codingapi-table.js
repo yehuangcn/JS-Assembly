@@ -80,16 +80,13 @@ var init = function(){
 }
 
 
-function  loadData( url , table){
-
-    if(!url.startWith("http://")){
-        url = URL + url;
-    }
-
-    var token =   comment.getToken();
-    var dataUrl = url + "?token="+token;
-    table.bootstrapTable("refresh", {url: dataUrl});
-
+function  refreshData(url , table){
+    var loadData = function(){
+        var dataUrl = url;
+        console.log(dataUrl);
+        table.bootstrapTable("refresh", {url: dataUrl});
+    };
+    setTimeout(loadData,1);
 }
 
 
@@ -110,17 +107,17 @@ var getTableStyle = function( div ){
         for(var i = 0; i< data.filed.length ; i++){
             var obj = data.filed[i];
             var field ="";
-            if(obj.value !=""){
+            if(obj.value !="" && obj.value != undefined){
                 field="data-field=\""+obj.value+"\"";
             }
 
             var formatter ="";
-            if(obj.formatter !=""){
+            if(obj.formatter !="" && obj.formatter != undefined){
                 formatter="data-formatter=\""+obj.formatter+"\"";
             }
 
             var events ="";
-            if(obj.events !=""){
+            if(obj.events !="" && obj.events != undefined){
                 events="data-events=\""+obj.events+"\"";
             }
 
@@ -129,11 +126,13 @@ var getTableStyle = function( div ){
         thead.append(tr);
         tableUrl = data.dataUrl;
         $(table).append(thead);
+
+        refreshData(tableUrl ,table);
     });
 
 
 
-    setTimeout(loadData(url ,table ),1);
+
 }
 
 
